@@ -1,0 +1,26 @@
+<div class="card m-3" style="max-width: 400px;">
+    <div class="card-header d-flex justify-content-between">
+
+
+
+        <div class="row g-0">
+
+            <img src="{{ article.photo.url }}" class="card-img-top" alt="...">
+
+
+            <div class="card-body">
+                <h5 class="card-title">{{ article.title }}</h5>
+                <p class="'card-text">Price: ${{ article.price }}</p>
+                <p class="card-text">{{ article.content|truncatewords:10 }}</p>
+                <p class="card-text">{{ article.created_at }}</p>
+                <a href="{% url 'article' article.pk %}" class="btn btn-primary">More</a>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+
